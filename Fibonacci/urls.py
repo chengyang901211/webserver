@@ -1,7 +1,6 @@
 from django.conf.urls import url
-
-from . import views
+from Fibonacci import views
 
 urlpatterns = [
-    url('Fibonacci/(?P<n>-?\d+)/$', views.Fibonacci, name='Fibonacci'),
+    url('Fibonacci/(?P<n>-?\d+)/$', views.get_Fibonacci_list, name='Fibonacci'),
 ]
