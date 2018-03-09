@@ -4,9 +4,10 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status, exceptions
 from django.core.cache import cache
-
+import os
 #Return list of Fibonacci result
 def get_Fibonacci_list(request,n):
+    print os.environ['PARAM1']
     if request.method == 'GET':
         if int(n) < 0:
             return HttpResponse("invalud input")
