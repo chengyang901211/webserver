@@ -83,6 +83,8 @@ try:
     print "find local setting"
     # MIDDLEWARE_CLASSES += ('dash.middleware.ProfileMiddleware',)
 except ImportError, e:
+    print "branch is "
+    print os.environ['PARAM1']
     if os.environ['PARAM1'] == 'production':
         DATABASES = {
             'default': {
