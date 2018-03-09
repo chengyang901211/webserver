@@ -18,5 +18,5 @@ from django.contrib import admin
 from Fibonacci import urls as Fibonacci_urls
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^Fibonacci/', include(Fibonacci_urls))
+    url(r'^', include(Fibonacci_urls))
 ]
