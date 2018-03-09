@@ -77,13 +77,18 @@ WSGI_APPLICATION = 'webserver.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+try:
+    from local_setting import *
+    INSTALLED_APPS += LOCAL_ONLY_APPS
+    print "find local setting"
+    # MIDDLEWARE_CLASSES += ('dash.middleware.ProfileMiddleware',)
+except ImportError, e:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
