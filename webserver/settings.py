@@ -90,6 +90,14 @@ except ImportError, e:
         }
     }
 
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+            'LOCATION': 'webserver-cache.nascld.cfg.usw2.cache.amazonaws.com:11211',
+            'TIMEOUT': 30*60,
+        }
+    }
+
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
