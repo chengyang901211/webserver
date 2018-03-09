@@ -7,6 +7,7 @@ from django.core.cache import cache
 import os
 #Return list of Fibonacci result
 def get_Fibonacci_list(request,n):
+    print "testing"
     print os.environ['PARAM1']
     if request.method == 'GET':
         if int(n) < 0:
