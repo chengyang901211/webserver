@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from rest_framework import status, exceptions
 from django.core.cache import cache
 
+#Return list of Fibonacci result
 def get_Fibonacci_list(request,n):
     if request.method == 'GET':
         if int(n) < 0:
@@ -22,7 +23,10 @@ def get_Fibonacci_list(request,n):
         return HttpResponse(', '.join(str(x) for x in result))
     else:
         return HttpResponse("invalud method")
-
+# Fibonacci function
+# if input is less or equal to 1 return input
+# else Fibonacci(n) = Fibonacci(n-1) + Fibonacci(n-2)
+# using cache in order to avoid duplicate computing
 def Fibonacci(n):
     if n <= 1:
       return n

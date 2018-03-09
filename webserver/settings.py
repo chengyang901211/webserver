@@ -83,20 +83,35 @@ try:
     print "find local setting"
     # MIDDLEWARE_CLASSES += ('dash.middleware.ProfileMiddleware',)
 except ImportError, e:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    if os.environ['PARAM1'] == 'production':
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+            }
         }
-    }
+        CACHES = {
+            'default': {
+                'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+                'LOCATION': 'webserver-cache-pro.nascld.cfg.usw2.cache.amazonaws.com:11211',
+                'TIMEOUT': 30*60,
+            }
+        }
+    elif os.environ['PARAM1'] == 'staging':
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+            }
+        }
+        CACHES = {
+            'default': {
+                'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+                'LOCATION': 'webserver-cache.nascld.cfg.usw2.cache.amazonaws.com:11211',
+                'TIMEOUT': 30*60,
+            }
+        }
 
-    CACHES = {
-        'default': {
-            'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-            'LOCATION': 'webserver-cache.nascld.cfg.usw2.cache.amazonaws.com:11211',
-            'TIMEOUT': 30*60,
-        }
-    }
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
