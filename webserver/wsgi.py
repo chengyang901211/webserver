@@ -11,7 +11,7 @@ import time
 import sys
 import signal
 import os,sys
-sys.path.append('/opt/python/current/app/webserver')
+sys.path.append('/opt/python/current/app/webserver/')
 os.environ['DJANGO_SETTINGS_MODULE'] = 'webserver.settings'
 
 
