@@ -12,9 +12,6 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-import sys
-reload(sys)
-sys.setdefaultencoding("utf-8")
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -26,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'qi$lx*=491p^%ukxzfrl!oj&aj@3(uyvbkrsily@eqzet(#1=)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -41,7 +38,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'rest_framework',
     'django.contrib.staticfiles',
-    'webserver',
     'Fibonacci'
 )
 
@@ -75,30 +71,17 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'webserver.wsgi.application'
-print "before try to find local setting file"
-# Check for local_setting
-try:
-    from local_setting import *
-    INSTALLED_APPS += LOCAL_ONLY_APPS
-    print "find local setting"
-    # MIDDLEWARE_CLASSES += ('dash.middleware.ProfileMiddleware',)
-except ImportError, e:
-    # Database
-    # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
-    CACHES = {
-        'default': {
-            'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-            'LOCATION': 'webserver-cache.nascld.cfg.usw2.cache.amazonaws.com:11211',
-            'TIMEOUT': 30*60,
-        }
-    }
 
+
+# Database
+# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
