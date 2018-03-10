@@ -1,0 +1,46 @@
+EnvironmentConfigurationMetadata:
+  DateCreated: '1520638289000'
+  DateModified: '1520638289000'
+Platform:
+  PlatformArn: arn:aws:elasticbeanstalk:us-west-2::platform/Python 2.7 running on 32bit Amazon Linux 2014.03/1.1.0
+OptionSettings:
+  aws:elasticbeanstalk:command:
+    BatchSize: '30'
+    BatchSizeType: Percentage
+    DeploymentPolicy: Rolling
+  aws:elasticbeanstalk:sns:topics:
+    Notification Endpoint: ''
+  aws:elb:policies:
+    ConnectionDrainingEnabled: true
+    ConnectionDrainingTimeout: '20'
+  aws:elasticbeanstalk:container:python:staticfiles:
+    /static/: webserver/static/
+  aws:elasticbeanstalk:application:environment:
+    DJANGO_SETTINGS_MODULE: webserver.settings
+    AWS_ACCESS_KEY_ID: ''
+    PARAM5: ''
+    PARAM2: ''
+    PARAM1: production
+    AWS_SECRET_KEY: ''
+    PARAM4: ''
+    PARAM3: ''
+  aws:elb:loadbalancer:
+    CrossZone: true
+  aws:elasticbeanstalk:environment:
+    ServiceRole: aws-elasticbeanstalk-service-role
+    EnvironmentType: LoadBalanced
+  aws:elasticbeanstalk:application:
+    Application Healthcheck URL: ''
+  aws:elasticbeanstalk:healthreporting:system:
+    HealthCheckSuccessThreshold: Ok
+  aws:autoscaling:launchconfiguration:
+    IamInstanceProfile: aws-elasticbeanstalk-ec2-role
+    InstanceType: t1.micro
+    EC2KeyName: Web-Server
+  aws:autoscaling:updatepolicy:rollingupdate:
+    RollingUpdateType: Health
+    RollingUpdateEnabled: true
+EnvironmentTier:
+  Type: Standard
+  Name: WebServer
+AWSConfigurationTemplateVersion: 1.1.0.0

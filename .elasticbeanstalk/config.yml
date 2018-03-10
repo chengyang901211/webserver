@@ -1,0 +1,22 @@
+branch-defaults:
+  master:
+    environment: null
+    group_suffix: null
+  staging:
+    environment: webServer-staging
+  production:
+    environment: webServer-production
+global:
+  application_name: web-server
+  branch: null
+  default_ec2_keyname: webserver
+  default_platform: python-2.7
+  default_region: us-west-2
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: user1
+  repository: null
+  sc: git
+  workspace_type: Application
