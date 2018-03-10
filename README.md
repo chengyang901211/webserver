@@ -113,7 +113,14 @@ Here is how my deployment path looks now:
 *   (6) $ git commit -m “Meaningful statement about changes.”
 *   (7) $ eb deploy
 *   (8) Test staging server on AWS
+*   (9) Checkout production branch if not already in production branch.
+*   (10) $ git merge staging
+*   (11) $ eb deploy
 
+Note:
+* Implemented functionally to use local_settings if the file dose exist. Please remove local_settings.py from git before deploy changes to AWS. More detail in settings.py.
+* Implemented functionally to use different cache base on enviroment variable "PARAM1". More detail in settings.py.
+  
 
 ## Authors
 
