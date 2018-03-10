@@ -1,33 +1,69 @@
-# web service
+# Sample web service
 
-One Paragraph of project description goes here
+The web service accepts a number, n, as input and returns the first n Fibonacci numbers, starting from 0. 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+This is the guide to setting up your local Python development environment, checking out the GIT repositories, and running the dev server. 
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+* [brew](https://brew.sh/)
+* *Python 2.7.10*
+* [virtualenv virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/install.html)
+* *git*
 
 ### Installing
 
 A step by step series of examples that tell you have to get a development env running
 
-Say what the step will be
-
+Create a virtualenv
 ```
-Give the example
+$ mkproject webserver
 ```
-
-And repeat
-
+Create a git repository: 
 ```
-until finished
+$ git init
+```
+Add the remote repository:
+```
+$ git remote add origin https://github.com/chengyang901211/webserver.git
+```
+Pull down the repository:
+```
+$ git pull origin master
+```
+Create a production branch: 
+```
+$ git branch production
+```
+Switch to the production branch: 
+```
+$ git checkout production
+```
+Pull down the production branch of the repository: 
+```
+$ git pull origin production
+```
+Create a staging branch: 
+```
+$ git branch staging
+```
+Switch to the staging branch: 
+```
+$ git checkout staging
+```
+Pull down the staging branch of the repository: 
+```
+$ git pull origin staging
+```
+Now let's install required library with: 
+```
+$ pip install -r requirements.txt
+```
+Now to start our Django development server!
+```
+python manage.py runserver
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
