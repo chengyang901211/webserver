@@ -6,10 +6,13 @@ from django.core.cache import cache
 #Return list of Fibonacci result
 def get_Fibonacci_list(request,n):
     if request.method == 'GET':
-        if int(n) < 0:
+        integer_n = int(n)
+        if n==0:
+            return '0'
+        if integer_n < 0:
             return HttpResponse("invalud input")
         result = list()
-        for i in range(0,int(n)):
+        for i in range(0,integer_n):
             local_result = cache.get(i)
             if local_result:
                 result.append(local_result)
