@@ -8,7 +8,7 @@ This is the guide to setting up your local Python development environment, check
 
 ### Prerequisites
 
-* [brew](https://brew.sh/)
+* [brew](https://brew.sh/)d
 * *Python 2.7.10*
 * [virtualenv virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/install.html)
 * *git*
