@@ -7,8 +7,8 @@ from django.core.cache import cache
 def get_Fibonacci_list(request,n):
     if request.method == 'GET':
         integer_n = int(n)
-        if n==0:
-            return '0'
+        if integer_n==0:
+            return HttpResponse('0')
         if integer_n < 0:
             return HttpResponse("invalud input")
         result = list()
