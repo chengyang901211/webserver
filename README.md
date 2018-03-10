@@ -2,13 +2,16 @@
 
 The web service accepts a number, n, as input and returns the first n Fibonacci numbers, starting from 0. 
 
+## Live Demo
+  http://webserver-production.us-west-2.elasticbeanstalk.com/Fibonacci/5/
+
 ## Getting Started
 
 This is the guide to setting up your local Python development environment, checking out the GIT repositories, and running the dev server. 
 
 ### Prerequisites
 
-* [brew](https://brew.sh/)d
+* *brew*
 * *Python 2.7.10*
 * [virtualenv virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/install.html)
 * *git*
@@ -61,6 +64,10 @@ Now let's install required library with:
 ```
 $ pip install -r requirements.txt
 ```
+Enable cache :
+```
+$ memcached -d
+```
 Now to start our Django development server!
 ```
 python manage.py runserver
@@ -69,7 +76,7 @@ Browse http://127.0.0.1:8000/Fibonacci/5/   to see a sample result.
 
 ## Running the tests
 
-Run unit test from (Test cases detail in 'Fibonacci/test.py'):
+Run unit test (Test cases detail in 'Fibonacci/test.py'):
 
 ```
 ./manage.py test
@@ -77,7 +84,8 @@ Run unit test from (Test cases detail in 'Fibonacci/test.py'):
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Additional notes about how to deploy this on a live system
+
 
 
 ## Authors
