@@ -92,6 +92,19 @@ Temporary AWS account(Expired on 3/17/2018):
 *  Account: yangcheng901211@gmail.com
 *  Password: Temp4now!
 
+Installing The Elastic Beanstalk Command Line Interface:
+```
+$ pip install eb
+```
+Initialize enviroment(please use AWS crendential which saving in '.elasticbeanstalk/aws_credential_config'):
+```
+$ eb init
+```
+Command to depoly changes to AWS:
+```
+$ eb deploy
+```
+
 
 ## Authors
 
