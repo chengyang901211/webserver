@@ -105,19 +105,14 @@ Command to depoly changes to AWS:
 $ eb deploy
 ```
 Here is how my deployment path looks now:
-   (1) Identify a bug to fix or improvement to make.
-   (2) Checkout staging branch if not already in staging branch.
-   (3) Make my changes in my local development environment.
-   (4) Test, debug, revise, etc… 
-   (5) $ git add .
-   (6) $ git commit -m “Meaningful statement about changes.”
-   (7) $ eb deploy
-   (8) checkout staging server on AWS
-   
-  Log into http://stage.backupops.com as sjavid@divinsa.com and check that all is right.
- Logout and login as dremer@wholesalebackup.com and check that all is right.
- $ git checkout master
-
+**   (1) Identify a bug to fix or improvement to make.
+*   (2) Checkout staging branch if not already in staging branch.
+*   (3) Make my changes in my local development environment.
+*   (4) Test, debug, revise, etc… 
+*   (5) $ git add .
+*   (6) $ git commit -m “Meaningful statement about changes.”
+*   (7) $ eb deploy
+*   (8) Test staging server on AWS
 
 
 ## Authors
