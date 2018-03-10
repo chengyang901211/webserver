@@ -105,7 +105,7 @@ Command to depoly changes to AWS:
 $ eb deploy
 ```
 Here is how my deployment path looks now:
-**   (1) Identify a bug to fix or improvement to make.
+*   (1) Identify a bug to fix or improvement to make.
 *   (2) Checkout staging branch if not already in staging branch.
 *   (3) Make my changes in my local development environment.
 *   (4) Test, debug, revise, etc… 
