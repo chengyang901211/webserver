@@ -96,7 +96,7 @@ Installing The Elastic Beanstalk Command Line Interface:
 ```
 $ pip install eb
 ```
-Initialize enviroment  (please use AWS crendential from '.elasticbeanstalk/aws_credential_config'):
+Initializes your directory with the EB CLI. Creates the application.  ( Application has been preconfigure in ".elasticbeanstalk/config.yml" except the AWS crendential. Please use AWS crendential in '.elasticbeanstalk/aws_credential_config'):
 ```
 $ eb init
 ```
