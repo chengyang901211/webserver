@@ -18,8 +18,6 @@ This is the guide to setting up your local Python development environment, check
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
 Create a virtualenv
 ```
 $ mkproject webserver
