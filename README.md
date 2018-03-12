@@ -88,7 +88,7 @@ I have precreated an AWS account with a staging and production server running on
 
 Temporary AWS account(Expired on 3/17/2018):
 *  Account: yangcheng901211@gmail.com
-*  Password: Temp4now!
+*  Password: T e m p 1 2 3 4    <---No Space
 
 Installing The Elastic Beanstalk Command Line Interface:
 ```
