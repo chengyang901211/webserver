@@ -86,10 +86,6 @@ Additional notes about how to deploy this on a live system
 
 I have precreated an AWS account with a staging and production server running on it. Each server has their own loadbalancer and cache for scaling and preformance improvement. (PS: All instances are on t1.micro(slow) )
 
-Temporary AWS account(Expired on 3/17/2018):
-*  Account: yangcheng901211@gmail.com
-*  Password: T e m p 1 2 3 4    <---No Space
-
 Installing The Elastic Beanstalk Command Line Interface:
 ```
 $ pip install eb
