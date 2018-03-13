@@ -2,9 +2,6 @@
 
 The web service accepts a number, n, as input and returns the first n Fibonacci numbers, starting from 0. 
 
-## Live Demo
-  http://webserver-production.us-west-2.elasticbeanstalk.com/Fibonacci/5/
-
 ## Getting Started
 
 This is the guide to setting up your local Python development environment, checking out the GIT repositories, and running the dev server. 
@@ -90,7 +87,7 @@ Installing The Elastic Beanstalk Command Line Interface:
 ```
 $ pip install eb
 ```
-Initializes your directory with the EB CLI. Creates the application.  ( Application has been preconfigure in ".elasticbeanstalk/config.yml" except the AWS crendential. Please use AWS crendential in '.elasticbeanstalk/aws_credential_config'):
+Initializes your directory with the EB CLI. Creates the application.  ( Application has been preconfigure in ".elasticbeanstalk/config.yml" except the AWS crendential. ):
 ```
 $ eb init
 ```
