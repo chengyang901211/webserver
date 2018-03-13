@@ -2,9 +2,6 @@
 
 The web service accepts a number, n, as input and returns the first n Fibonacci numbers, starting from 0. 
 
-## Live Demo
-  http://webserver-production.us-west-2.elasticbeanstalk.com/Fibonacci/5/
-
 ## Getting Started
 
 This is the guide to setting up your local Python development environment, checking out the GIT repositories, and running the dev server. 
